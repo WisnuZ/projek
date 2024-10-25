@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5; /* Light background for contrast */
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background-color: #2f2d8a;
+            color: white;
+            padding: 0.5rem;
+        }
+        .top-bar p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .navbar {
+            background-color: #0f6e4f;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 0.8rem;
+            transition: color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f0c75e !important; /* Highlight color on hover */
+        }
+      
+
+        .navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 0.8rem;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #f0c75e;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+        header {
+            background: linear-gradient(180deg, #1e5d79 0%, #084f60 100%);
+            height: 250px; /* Increased height for better aesthetics */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        }
+        header h1 {
+            font-size: 2.5rem;
+            animation: fadeIn 1s ease-in-out; /* Animation for header text */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .breadcrumb {
+            background: none;
+            padding: 0.75rem 1rem;
+        }
+        .breadcrumb-item a {
+            color: #6c757d;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .breadcrumb-item a:hover {
+            color: #0f6e4f; /* Change color on hover */
+        }
+        .content-title {
+            font-weight: bold;
+            padding: 10px 0;
+        }
+        /* Footer CSS */
+        footer {
+            background-color: #f8f9fa;
+            padding: 3rem 0;
+        }
+        .footer-heading {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .footer-section {
+            margin-bottom: 1.5rem;
+        }
+        .footer-section p {
+            margin-bottom: 1rem;
+        }
+        .social-icons a {
+            margin-right: 10px;
+            color: #6c757d;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .subscribe-input {
+            max-width: 300px;
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+        }
+        .copyright {
+            padding-top: 1rem;
+            border-top: 1px solid #e9ecef;
+            margin-top: 2rem;
+            color: #6c757d;
+            text-align: center;
+        }
+        .card {
+            transition: transform 0.3s; /* Animation on card hover */
+        }
+        .card:hover {
+            transform: scale(1.02); /* Scale effect on hover */
+        }
+        .comment-section {
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/img/logo.jpg" alt="Muhammadiyah" width="50">
+                Ustandz
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentang.html">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="kajian.html">Kajian</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Hukum Islam</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Content & Sidebar -->
+    <div class="container my-4">
+        <div class="row">
+            <!-- Main Content (Ustazah Article) -->
+            <div class="col-md-8">
+                <h5 class="content-title">USTAZAH SRI WAHYUNI MENGAJAK KADER UNTUK BERGABUNG KE NU</h5>
+                <img src="assets/img/foto1.jpg" class="img-fluid" alt="Post Image" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                <h5 class="mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt excepturi quaerat sunt autem vitae voluptas molestias corporis! Dolore eius molestias nihil hic velit dolorum earum, necessitatibus porro aut commodi esse. Sint quidem enim voluptate quos molestias, veritatis inventore, consectetur, dolore quasi nulla ducimus itaque! Aperiam molestiae atque incidunt quaerat, ad voluptatum dolorem tempore sapiente, aut qui cum in aliquid enim?</h5>
+
+                <!-- Comment Section -->
+                <div class="comment-section">
+                    <h4>Tinggalkan Balasan/Komentar</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" placeholder="Nama Anda">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="komentar" class="form-label">Komentar</label>
+                            <textarea class="form-control" id="komentar" rows="4" placeholder="Tulis komentar Anda di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Komentar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sidebar (Berita Populer) -->
+            <div class="col-md-4">
+                <h4 class="content-title">Berita Populer</h4>
+                <!-- First News -->
+                <div class="card mb-3">
+                    <img src="assets/img/foto1.jpg" class="card-img-top" alt="News Image" style="border-radius: 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Lima Doa untuk Orang Sakit yang Berasal dari Sunnah Rasulullah Saw</h5>
+                        <p class="card-text">Ustadz Sri Wahyuni menjelaskan beberapa doa penting dalam menghadapi sakit.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <!-- Second News -->
+                <div class="card mb-3">
+                    <img src="assets/img/foto1.jpg" class="card-img-top" alt="News Image" style="border-radius: 10px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Sambut Baik Kunjungan Imam Besar Masjid Nabawi</h5>
+                        <p class="card-text">PP Muhammadiyah menyambut kunjungan Imam Besar Masjid Nabawi dengan penuh semangat.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-md-start">
+        <div class="container">
+            <div class="row">
+                <!-- About Us Section -->
+                <div class="col-md-3 footer-section">
+                    <h5 class="footer-heading">About Us</h5>
+                    <p>There live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <a href="#" class="btn btn-success rounded-pill">Learn more</a>
+                </div>
+
+                <!-- Navigation Section -->
+                <div class="col-md-3 footer-section">
+                    <h5 class="footer-heading">Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Overview</a></li>
+                        <li><a href="#" class="text-dark">About Us</a></li>
+                        <li><a href="#" class="text-dark">Find Buyers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Recent Posts Section -->
+                <div class="col-md-3 footer-section">
+                    <h5 class="footer-heading">Recent Posts</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <p class="text-muted mb-1">May 3, 2020</p>
+                            <a href="#" class="text-dark">There live the Blind Texts</a>
+                        </li>
+                        <li>
+                            <p class="text-muted mb-1">May 3, 2020</p>
+                            <a href="#" class="text-dark">Far Far Away, Behind</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-3 footer-section">
+                    <h5 class="footer-heading">Contact</h5>
+                    <p>Contact us for further details.</p>
+                    <input type="text" class="form-control subscribe-input" placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Ustandz. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
